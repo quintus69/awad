@@ -32,7 +32,7 @@ app.get('/', function(req,res){
 app.post('/', function(req,res){
 
     const Login = mongoose.model('Login',login);
-    const nigga = new Login({email: req.body.email, password: req.body.password})
+    const User = new Login({email: req.body.email, password: req.body.password})
     nigga.save();
     res.render('success')
 })
