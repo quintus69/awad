@@ -14,23 +14,10 @@ mongoose.connect('mongodb+srv://nisemono:nisemono123@cluster0.9dbw8ss.mongodb.ne
     console.log(err)
 })
 
-const movieSchema = new mongoose.Schema({
-    name: String,
-    rating: Number,
-    score: Number,
-    year: Number
-})
-
 const login = new mongoose.Schema({
     email : String,
     password : String
 })
-
-
-
-
-
-
 
 app.set('view engine', 'ejs')
 app.use(bodyparser.urlencoded({extended:true}))
